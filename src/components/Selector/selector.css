@@ -1,0 +1,38 @@
+.dish-title {
+  border: black solid 1px;
+}
+
+.dish-menu {
+  background-color: #ffa225;
+  margin: 10px;
+}
+
+.dish-container-horizontal {
+  display: flex;
+  overflow-x: auto;
+}
+
+.dish-container {
+  background-color: #11111f;
+  /* color: white; */
+  position: relative;
+  flex: 0 0 calc(20% - 10px);
+  border: black solid 1px;
+  border-radius: 20px;
+  text-align: center;
+  align-items: center;
+  box-shadow: 4px 6px 8px;
+  margin: 15px;
+  background-color: #11111f;
+}
+
+.dish-container img {
+  object-fit: fill;
+  width: 100%;
+  height: 200px;
+  border-radius: 20px 20px 0 0;
+}
+
+.dish-info {
+  color: rgb(161, 179, 0);
+}
