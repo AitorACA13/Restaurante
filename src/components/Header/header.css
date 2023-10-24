@@ -1,7 +1,10 @@
 header {
   background-color: #11111f;
   height: 200px;
+  border-radius: 0 0 85% 85% / 30%;
 }
+
 .logo-header {
-  height: 200px;
+  margin-top: 35px;
+  height: 110px;
 }
