@@ -3,10 +3,12 @@ import Contador from './components/Contador/Contador';
 import Selector from './components/Selector/Selector';
 import Header from './components/Header/Header';
 import './App.css';
+import SelectionHistory from './components/Historial/Historial';
 
 function App() {
   const [selectedDish, setSelectedDish] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
+  const [selectionHistory, setSelectionHistory] = useState([]);
 
   const handleSelection = (option) => {
     const isOptionSelected = selectedDish.some((item) => item.id === option.id);
@@ -23,6 +25,8 @@ function App() {
       updatedSelections = [...selectedDish, option];
       const newTotalPrice = totalPrice + option.price;
       setTotalPrice(newTotalPrice);
+      const selection = { ...option, quantity: isOptionSelected ? 0 : 1 };
+      setSelectionHistory([...selectionHistory, selection]);
     }
 
     setSelectedDish(updatedSelections);
@@ -112,6 +116,8 @@ function App() {
         handleSelection={handleSelection}
       />
 
+      <Contador total={totalPrice} />
+      <SelectionHistory selectionHistory={selectionHistory} />
       <Contador total={totalPrice} />
     </div>
   );

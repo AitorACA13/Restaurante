@@ -1,10 +1,23 @@
 .dish-title {
   border: black solid 1px;
+  cursor: pointer;
 }
 
 .dish-menu {
+  max-width: 600px;
   background-color: #ffa225;
   margin: 10px;
+  transition: max-height 1s ease-in;
+  transition: max-width 1s ease-in;
+  max-height: 70px;
+  overflow: hidden;
+}
+
+.dish-menu.expanded {
+  max-height: 400px;
+  max-width: 1400px;
+  transition: max-height 0.5s ease-in-out;
+  overflow: auto;
 }
 
 .dish-container-horizontal {
@@ -12,6 +25,9 @@
   overflow-x: auto;
 }
 
+.dish-container-horizontal.open {
+  max-height: 500px;
+}
 .dish-container {
   background-color: #11111f;
   /* color: white; */
