@@ -1,9 +1,10 @@
 import React from 'react';
+import Contador from '../Contador/Contador';
 import './historial.css';
 
 function SelectionHistory({ selectionHistory }) {
   return (
-    <div>
+    <div className='history'>
       <h2>Selección</h2>
       <ul>
         {selectionHistory.map((selection, index) => (
