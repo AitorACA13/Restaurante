@@ -31,8 +31,14 @@ function App() {
     setSelectedDish(updatedSelections);
   };
 
+  const resetSelection = () => {
+    setSelectedDish([]);
+    setTotalPrice(0);
+    setSelectionHistory([]);
+  };
+
   return (
-    <div>
+    <div className='app-page'>
       <Header />
       <div className='app-container'>
         {/* <h1>Menú</h1> */}
@@ -56,7 +62,7 @@ function App() {
 
         <div className='history-container'>
           <SelectionHistory selectionHistory={selectionHistory} />
-          <Contador total={totalPrice} />
+          <Contador total={totalPrice} resetSelection={resetSelection} />
         </div>
       </div>
     </div>

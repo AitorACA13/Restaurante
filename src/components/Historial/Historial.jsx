@@ -1,5 +1,3 @@
-import React from 'react';
-import Contador from '../Contador/Contador';
 import './historial.css';
 
 function SelectionHistory({ selectionHistory }) {
