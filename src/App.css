@@ -1,7 +1,6 @@
 #root {
   text-align: center;
 }
-/* 
 .app-container {
   display: flex;
   justify-content: space-between;
@@ -10,10 +9,14 @@
 
 .selectors-container {
   align-items: left;
-  width: 1400px; /* Ajusta el ancho según tus necesidades */
+  max-width: 1400px;
 }
 
 .history-container {
-  width: 400px; /* Ajusta el ancho según tus necesidades */
+  margin-top: 50px;
+  margin-right: 70px;
+  width: 400px;
 }
- */
+.app-page {
+  background-color: #444444;
+}
